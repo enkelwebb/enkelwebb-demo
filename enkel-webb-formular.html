@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Enkel Webb — Beställ din hemsida</title>
+<title>Enkel Webb — Beställningsformulär</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;1,300&family=Playfair+Display:ital,wght@0,700;1,400&family=Barlow+Condensed:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -208,7 +208,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <div class="topbar-logo">Enkel Webb — Beställ din hemsida</div>
+  <div class="topbar-logo">Enkel Webb — Beställningsformulär</div>
   <div class="topbar-right">
     <div class="summary-chip">Paket: <span id="sp-pkg">Grundpaket</span></div>
     <div class="summary-chip">Leverans: <span>Inom 48h</span></div>
@@ -221,8 +221,8 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
 
 <!-- ══════════════════ FORM ══════════════════ -->
 <div class="form-wrap">
-  <h1 class="form-title">Beställ din hemsida</h1>
-  <p class="form-subtitle">Fyll i formuläret nedan så återkommer vi inom 24 timmar. Inga konstigheter — bara det vi behöver för att bygga din sida.</p>
+  <h1 class="form-title">Din beställning</h1>
+  <p class="form-subtitle">Fyll i uppgifterna nedan. Förhandsifyllt material — kontrollera och justera vid behov.</p>
 
   <form id="orderForm" action="https://formspree.io/f/DITT-FORMSPREE-ID" method="POST">
 
@@ -265,7 +265,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
     <!-- ── 2. GRUNDINFORMATION ── -->
     <div class="fsec" id="sec-info">
       <div class="fsec-title">Grundinformation</div>
-      <p class="fsec-note">Fyll i era uppgifter nedan. Lämna tomt om något saknas — vi kan alltid fylla i det senare.</p>
+      <p class="fsec-note">Jag har förhandsifyllt det jag hittade online. Kontrollera och ändra vid behov — lämna tomt om uppgiften saknas.</p>
       <div class="fg">
         <div class="field"><label>Företagsnamn *</label><input type="text" name="foretagsnamn" id="f-namn" required placeholder="Salongens namn" oninput="syncPreview()"/></div>
         <div class="field"><label>Telefonnummer</label><input type="text" name="telefon" id="f-telefon" placeholder="+46 70 000 00 00" oninput="syncPreview()"/></div>
@@ -302,7 +302,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
     <!-- ── 3. TJÄNSTER & PRISER ── -->
     <div class="fsec" id="sec-svcs">
       <div class="fsec-title">Tjänster &amp; priser</div>
-      <p class="fsec-note">Lista de tjänster ni vill visa på sidan. Lägg till så många ni vill.</p>
+      <p class="fsec-note">Lägg till, ta bort eller justera. Jag kan fylla i det jag hittar på Bokadirekt i förväg.</p>
       <div class="svc-header">
         <span>Tjänst</span>
         <span>Pris</span>
@@ -318,7 +318,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
       <div class="fsec-title">Textinnehåll</div>
       <div class="fg w1">
         <div class="field"><label>Kort beskrivning av verksamheten *</label>
-          <textarea name="beskrivning" id="f-beskrivning" rows="3" placeholder="T.ex. 'Vi är en salong i centrala Göteborg med fokus på färgning och moderna klippningar...'"></textarea>
+          <textarea name="beskrivning" id="f-beskrivning" rows="3" placeholder="Berätta kort om salongen — vad ni erbjuder och vad som gör er unika."></textarea>
         </div>
       </div>
       <div class="fg w1">
@@ -369,7 +369,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
         <div class="field"><label>Länk till bilder</label><input type="text" name="bildlank" placeholder="https://drive.google.com/..."/></div>
       </div>
       <div id="img-email" style="display:none;margin-top:10px">
-        <p style="font-size:0.8rem;color:var(--mid);padding:12px;background:var(--white);border:1px solid var(--rule)">✓ Skicka era bilder till <strong>enkelwebb@outlook.com</strong> med ämnet: <em>Bilder — [Er salongs namn]</em></p>
+        <p style="font-size:0.8rem;color:var(--mid);padding:12px;background:var(--white);border:1px solid var(--rule)">✓ Skicka bilderna till <strong>enkelwebb@outlook.com</strong> med ämnet: <em>Bilder — [Salongens namn]</em></p>
       </div>
       <div id="img-none" style="margin-top:10px">
         <div class="field"><label>Önskemål om bildkänsla (valfritt)</label><input type="text" name="bildonskemal" placeholder="T.ex. ljust och luftigt, naturlig miljö..."/></div>
@@ -430,7 +430,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
       <div class="fsec-title">Övriga önskemål</div>
       <div class="fg w1">
         <div class="field"><label>Finns det något annat ni vill ha med eller tänkt på?</label>
-          <textarea name="ovrigt" rows="4" placeholder="Finns det något annat ni vill ha med, tänkt på eller som är viktigt för er sida? Skriv gärna fritt."></textarea>
+          <textarea name="ovrigt" rows="4" placeholder="T.ex. speciella önskemål om layout, text, funktioner, eller annat ni vill lyfta..."></textarea>
         </div>
       </div>
     </div>
@@ -438,10 +438,10 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
     <!-- ── 8. TILLVAL: PUBLICERING ── -->
     <div class="fsec" id="sec-pub">
       <div class="fsec-title">Tillval — Publiceringshjälp</div>
-      <p class="fsec-note">Enkel Webb levererar färdiga HTML/CSS-filer i .zip-format. Ni ansvarar själva för domän, webbhotell och uppladdning. Om ni vill ha hjälp med det kan vi erbjuda publiceringshjälp mot en extra avgift.</p>
+      <p class="fsec-note">Enkel Webb levererar färdiga HTML/CSS-filer i .zip-format. Kunden ansvarar för domän, webbhotell och uppladdning om inget annat avtalas. Publiceringshjälp kan erbjudas mot extra avgift.</p>
       <div class="radio-opts">
-        <label class="radio-opt"><input type="radio" name="publicering" value="nej" checked/><div class="rdot"></div><span class="radio-opt-text">Nej tack — vi laddar upp själva</span></label>
-        <label class="radio-opt"><input type="radio" name="publicering" value="ja"/><div class="rdot"></div><span class="radio-opt-text">Ja tack — Publiceringshjälp (+500 kr) &nbsp;<span style="font-size:0.72rem;color:var(--mid)">Enkel Webb hjälper till att ladda upp sidan på ert webbhotell</span></span></label>
+        <label class="radio-opt"><input type="radio" name="publicering" value="nej" checked/><div class="rdot"></div><span class="radio-opt-text">Nej tack — kunden laddar upp själv</span></label>
+        <label class="radio-opt"><input type="radio" name="publicering" value="ja"/><div class="rdot"></div><span class="radio-opt-text">Ja tack — Publiceringshjälp (+500 kr) &nbsp;<span style="font-size:0.72rem;color:var(--mid)">Enkel Webb hjälper till att ladda upp sidan på kundens webbhotell</span></span></label>
       </div>
     </div>
 
@@ -458,21 +458,17 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
         <div class="order-row"><span>Överlämning</span><strong>.zip-filer levereras efter full betalning</strong></div>
         <div class="order-total"><span>Totalt</span><span id="legal-price">3 000 kr</span></div>
       </div>
-
       <div class="legal-text">
         <strong>Villkor — läs igenom innan du skickar:</strong><br><br>
-        <strong>Vad som ingår:</strong> Anpassning av vald HTML/CSS-mall med er information, era bilder och er design. Grundpaket inkluderar 1 ändringsrunda efter leverans. Premiumpaket inkluderar 2 ändringsrundor. Extra ändringar utöver detta debiteras separat och avtalas vid behov.<br><br>
+        <strong>Vad som ingår:</strong> Anpassning av vald HTML/CSS-mall med kundens information, bilder och design. Grundpaket inkluderar 1 ändringsrunda efter leverans. Premiumpaket inkluderar 2 ändringsrundor. Extra ändringar utöver detta debiteras separat och avtalas vid behov.<br><br>
         <strong>Vad som inte ingår:</strong> Domän, webbhotell och uppladdning ingår inte om inget annat avtalats. Löpande uppdateringar efter leverans ingår inte. Bokadirekt-abonnemang och externa bokningssystem ingår inte. Copywriting från noll ingår i begränsad omfattning. Större designändringar utöver mallen ingår inte.<br><br>
         <strong>Leverans:</strong> Enkel Webb levererar färdiga HTML/CSS-filer i .zip-format. En förhandsvisning skickas för godkännande innan betalning. Filerna levereras efter att full betalning mottagits.<br><br>
         <strong>Betalning:</strong> Faktura med 14 dagars betalningsvillkor skickas efter godkänd förhandsvisning. Priset är exklusive moms om beställaren är privatperson.<br><br>
         <strong>Bindande avtal:</strong> Beställningen blir bindande när detta formulär skickas in och villkoren godkänns nedan.
       </div>
-
-      <!-- GDPR -->
       <div style="font-size:0.74rem;color:var(--mid);padding:12px 14px;background:var(--white);border:1px solid var(--rule);margin-bottom:20px;line-height:1.7;">
-        <strong style="color:var(--ink)">Personuppgifter (GDPR):</strong> Genom att skicka formuläret godkänner du att Enkel Webb behandlar dina uppgifter för att kunna skapa offert, genomföra beställningen och kontakta dig kring hemsidan. Uppgifterna sparas endast så länge de behövs för uppdraget, bokföring och eventuell uppföljning. Uppgifterna delas inte med tredje part utöver vad som krävs för tjänstens utförande.
+        <strong style="color:var(--ink)">Personuppgifter (GDPR):</strong> Genom att skicka formuläret godkänner kunden att Enkel Webb behandlar uppgifterna för att kunna skapa offert, genomföra beställningen och kontakta kunden kring hemsidan. Uppgifterna sparas endast så länge de behövs för uppdraget, bokföring och eventuell uppföljning. Uppgifterna delas inte med tredje part utöver vad som krävs för tjänstens utförande.
       </div>
-
       <div class="fg">
         <div class="field"><label>Ditt namn *</label><input type="text" name="godkannare_namn" required placeholder="För- och efternamn"/></div>
         <div class="field"><label>Företagets namn *</label><input type="text" name="godkannare_foretag" required placeholder="Salongens officiella namn"/></div>
@@ -484,7 +480,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;fon
       <input type="hidden" name="datum" id="hidden-datum"/>
       <input type="hidden" name="_subject" value="Ny beställning — Enkel Webb"/>
       <button type="submit" class="btn-submit">Skicka beställning <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-      <p style="font-size:0.7rem;color:var(--mid);margin-top:10px;text-align:center">Er beställning skickas till Enkel Webb. Ni får en bekräftelse via e-post inom 24 timmar.</p>
+      <p style="font-size:0.7rem;color:var(--mid);margin-top:10px;text-align:center">Beställningen skickas direkt till Enkel Webb. Kunden får en bekräftelse via e-post.</p>
     </div>
 
   </form>
@@ -935,25 +931,42 @@ document.querySelectorAll('input[name="paket"]').forEach(r => {
     const inc     = isPremium ? 'En sida + galleri + team + omdömen + karta' : 'En sida med all info + bokningsknapp';
     const changes = isPremium ? '2 ändringsrundor ingår' : '1 ändringsrunda ingår';
 
-    document.getElementById('sp-pkg').textContent      = pkg;
-    document.getElementById('sp-price').textContent    = price;
-    document.getElementById('legal-pkg').textContent   = pkg;
-    document.getElementById('legal-price').textContent = price;
-    document.getElementById('legal-inc').textContent   = inc;
+    document.getElementById('sp-pkg').textContent       = pkg;
+    document.getElementById('sp-price').textContent     = price;
+    document.getElementById('legal-pkg').textContent    = pkg;
+    document.getElementById('legal-price').textContent  = price;
+    document.getElementById('legal-inc').textContent    = inc;
     document.getElementById('legal-changes').textContent = changes;
-    document.getElementById('cb-pkg').textContent      = pkg + 'et';
-    document.getElementById('cb-price').textContent    = price;
+    document.getElementById('cb-pkg').textContent       = pkg + 'et';
+    document.getElementById('cb-price').textContent     = price;
   });
 });
+
+// ══════════════════════════════════════════
+// URL PREFILL
+// ══════════════════════════════════════════
+function getParam(k) { return new URLSearchParams(window.location.search).get(k) || ''; }
 
 // ══════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
+  // prefill from URL params
+  const map = {
+    'f-namn':'namn','f-telefon':'telefon','f-adress':'adress',
+    'f-epost':'epost','f-instagram':'instagram','f-facebook':'facebook'
+  };
+  Object.entries(map).forEach(([id,p]) => {
+    const v = getParam(p);
+    if (v) document.getElementById(id).value = v;
+  });
+
   document.getElementById('hidden-datum').value = new Date().toLocaleDateString('sv-SE');
 
   buildHours();
-  addService();
+  addService('Klippning','350','30min');
+  addService('Färgning','799','60min');
+  addService('Klippning & Färg','1099','90min');
 
   updatePreview();
   syncPreview();

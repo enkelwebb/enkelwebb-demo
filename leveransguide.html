@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Enkel Webb — Leveransguide</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Epilogue:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#F2EFE9;color:#141210;font-family:'Epilogue',sans-serif;font-weight:300;min-height:100vh;padding:0;}
+
+.page{max-width:760px;margin:0 auto;padding:64px 48px;}
+
+/* HEADER */
+.header{border-bottom:2px solid #141210;padding-bottom:32px;margin-bottom:48px;}
+.brand{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#3D5A45;margin-bottom:12px;}
+.header h1{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;line-height:1.05;letter-spacing:-0.02em;color:#141210;margin-bottom:8px;}
+.header p{font-size:0.88rem;color:#7A756E;line-height:1.6;}
+
+/* INTRO BOX */
+.intro-box{background:#141210;color:#F2EFE9;padding:28px 32px;margin-bottom:48px;}
+.intro-box p{font-size:0.88rem;line-height:1.75;}
+.intro-box strong{color:#C9A84C;}
+
+/* SECTION */
+.section{margin-bottom:48px;}
+.section-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#C4BDB4;margin-bottom:8px;}
+.section h2{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-0.01em;color:#141210;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #E0DAD2;}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0;}
+.step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #E0DAD2;align-items:start;}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;color:#C4BDB4;background:#E0DAD2;padding:4px 8px;text-align:center;margin-top:2px;}
+.step-content h3{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;color:#141210;margin-bottom:5px;}
+.step-content p{font-size:0.83rem;color:#7A756E;line-height:1.65;}
+.step-content code{font-size:0.8rem;background:#E0DAD2;padding:2px 7px;color:#141210;font-family:monospace;}
+.step-content .tip{font-size:0.76rem;color:#3D5A45;margin-top:6px;padding:6px 10px;background:#EAF2EB;border-left:2px solid #3D5A45;}
+
+/* FILE LIST */
+.file-list{background:#FAFAF8;border:1.5px solid #E0DAD2;padding:20px 24px;}
+.file-item{display:flex;align-items:flex-start;gap:14px;padding:10px 0;border-bottom:1px solid #E0DAD2;}
+.file-item:last-child{border-bottom:none;}
+.file-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.file-name{font-family:monospace;font-size:0.82rem;font-weight:600;color:#141210;margin-bottom:3px;}
+.file-desc{font-size:0.78rem;color:#7A756E;}
+
+/* PROVIDERS TABLE */
+.providers{width:100%;border-collapse:collapse;margin-top:4px;}
+.providers th{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#C4BDB4;padding:8px 12px;text-align:left;font-weight:400;border-bottom:1.5px solid #E0DAD2;}
+.providers td{padding:12px;font-size:0.82rem;border-bottom:1px solid #E0DAD2;vertical-align:top;}
+.providers td:first-child{font-weight:500;color:#141210;}
+.providers td{color:#7A756E;}
+.providers tr:last-child td{border-bottom:none;}
+.badge{display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;background:#EAF2EB;color:#3D5A45;margin-left:6px;}
+
+/* CONTACT BOX */
+.contact-box{background:#FAFAF8;border:1.5px solid #E0DAD2;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.contact-item-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:#C4BDB4;margin-bottom:6px;}
+.contact-item-val{font-size:0.88rem;color:#141210;}
+.contact-item-val a{color:#3D5A45;text-decoration:none;}
+
+/* NOT INCLUDED */
+.not-included{background:#FAFAF8;border:1.5px solid #E0DAD2;padding:20px 24px;}
+.ni-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #E0DAD2;font-size:0.82rem;color:#7A756E;}
+.ni-item:last-child{border-bottom:none;}
+.ni-item::before{content:'×';color:#C4BDB4;font-weight:700;font-size:0.85rem;flex-shrink:0;width:16px;}
+
+/* FOOTER */
+.footer{border-top:1px solid #E0DAD2;padding-top:28px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#141210;}
+.footer-copy{font-size:0.72rem;color:#C4BDB4;}
+
+@media(max-width:600px){
+  .page{padding:32px 20px;}
+  .contact-box{grid-template-columns:1fr;}
+  .header h1{font-size:1.6rem;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">Enkel Webb</div>
+    <h1>Din hemsida<br>är levererad.</h1>
+    <p>Den här guiden hjälper dig att komma igång. Läs igenom den en gång — det är enklare än det låter.</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    <p>I den här mappen finns din färdiga hemsida som <strong>HTML/CSS-filer</strong>. För att den ska synas på internet behöver du ett <strong>webbhotell</strong> och en <strong>domän</strong> (t.ex. dinsalong.se). Det tar ungefär 15–30 minuter att komma igång — vi guidar dig steg för steg nedan.</p>
+  </div>
+
+  <!-- SECTION: FILER -->
+  <div class="section">
+    <div class="section-label">Steg 1</div>
+    <h2>Det här finns i din .zip</h2>
+    <div class="file-list">
+      <div class="file-item">
+        <div class="file-icon">📄</div>
+        <div>
+          <div class="file-name">index.html</div>
+          <div class="file-desc">Din hemsida. Det är den här filen som visas när någon besöker din domän. Den ska alltid heta <code>index.html</code>.</div>
+        </div>
+      </div>
+      <div class="file-item">
+        <div class="file-icon">📁</div>
+        <div>
+          <div class="file-name">images/ &nbsp;<span style="font-weight:300;font-family:'Epilogue',sans-serif">(om du skickat egna bilder)</span></div>
+          <div class="file-desc">Mappen med dina bilder. Flytta hela mappen tillsammans med index.html — de måste ligga på samma ställe.</div>
+        </div>
+      </div>
+      <div class="file-item">
+        <div class="file-icon">📖</div>
+        <div>
+          <div class="file-name">leveransguide.html</div>
+          <div class="file-desc">Det här dokumentet. Behöver inte laddas upp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: WEBBHOTELL -->
+  <div class="section">
+    <div class="section-label">Steg 2</div>
+    <h2>Välj webbhotell &amp; domän</h2>
+    <p style="font-size:0.85rem;color:#7A756E;margin-bottom:16px;line-height:1.6">Du behöver betala för ett webbhotell (ungefär 30–60 kr/månad) och en domän (ungefär 100–150 kr/år). Nedan är tre bra alternativ för nybörjare:</p>
+    <table class="providers">
+      <thead>
+        <tr><th>Leverantör</th><th>Pris ca</th><th>Kommentar</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Loopia.se <span class="badge">Rekommenderas</span></td>
+          <td>~40 kr/mån</td>
+          <td>Svensk support, enkelt gränssnitt, bra för nybörjare</td>
+        </tr>
+        <tr>
+          <td>One.com</td>
+          <td>~35 kr/mån</td>
+          <td>Enkelt att använda, bra pris, populärt i Sverige</td>
+        </tr>
+        <tr>
+          <td>Hostinger</td>
+          <td>~25 kr/mån</td>
+          <td>Billigaste alternativet, engelskspråkigt gränssnitt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION: LADDA UPP -->
+  <div class="section">
+    <div class="section-label">Steg 3</div>
+    <h2>Ladda upp din hemsida</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h3>Logga in på ditt webbhotell</h3>
+          <p>Gå till din leverantörs webbplats och logga in på ditt konto (Loopia, One.com, Hostinger etc.).</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h3>Öppna filhanteraren</h3>
+          <p>Hitta "Filhanterare", "File Manager" eller "cPanel" i kontrollpanelen. Det är här du laddar upp filer.</p>
+          <div class="tip">Hos Loopia heter det "Filhanteraren". Hos One.com heter det "File Manager".</div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h3>Navigera till rätt mapp</h3>
+          <p>Gå till mappen som heter <code>public_html</code>, <code>www</code> eller <code>htdocs</code>. Det är i den mappen din hemsida ska ligga.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h3>Ladda upp filerna</h3>
+          <p>Ladda upp <code>index.html</code> och mappen <code>images/</code> (om den finns) till rätt mapp. Se till att <code>index.html</code> ligger direkt i rooten — inte i en undermapp.</p>
+          <div class="tip">De flesta filhanterare har en "Ladda upp"-knapp eller drag-and-drop-stöd.</div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">05</span>
+        <div class="step-content">
+          <h3>Koppla din domän</h3>
+          <p>Om du köpt domänen hos samma leverantör som webbhotellet kopplas den oftast automatiskt. Annars finns guider på respektive webbhotells supportsidor.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">06</span>
+        <div class="step-content">
+          <h3>Testa!</h3>
+          <p>Öppna din domän i webbläsaren. Det kan ta upp till 24 timmar innan domänen aktiveras — det är normalt.</p>
+          <div class="tip">Fungerar det inte direkt? Vänta 1–2 timmar och försök igen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: BOKADIREKT -->
+  <div class="section">
+    <div class="section-label">Att tänka på</div>
+    <h2>Din bokningsknapp</h2>
+    <p style="font-size:0.85rem;color:#7A756E;line-height:1.65">Din hemsida har en "Boka nu"-knapp som är länkad till din Bokadirekt-sida. Om din Bokadirekt-länk förändras eller om du byter bokningssystem behöver länken i hemsidan uppdateras. Kontakta Enkel Webb för hjälp med det, eller sök på <code>bokadirekt.se</code> i filen för att hitta länken och byta ut den själv.</p>
+  </div>
+
+  <!-- SECTION: INGÅR INTE -->
+  <div class="section">
+    <div class="section-label">Viktigt att veta</div>
+    <h2>Vad som inte ingår</h2>
+    <div class="not-included">
+      <div class="ni-item">Domän och webbhotell — det betalar du direkt till din leverantör</div>
+      <div class="ni-item">Uppladdning och driftsättning — om du behöver hjälp erbjuds det som tillval</div>
+      <div class="ni-item">Löpande uppdateringar och ändringar efter leverans</div>
+      <div class="ni-item">Bokadirekt-abonnemang och externa bokningssystem</div>
+      <div class="ni-item">Större designändringar utöver ingående ändringsrundor</div>
+    </div>
+  </div>
+
+  <!-- SECTION: KONTAKT -->
+  <div class="section">
+    <div class="section-label">Behöver du hjälp?</div>
+    <h2>Kontakta Enkel Webb</h2>
+    <p style="font-size:0.85rem;color:#7A756E;margin-bottom:16px;line-height:1.6">Har du frågor om din hemsida, behöver en ändring eller vill ha hjälp med uppladdning? Hör av dig så hjälper vi dig.</p>
+    <div class="contact-box">
+      <div>
+        <div class="contact-item-label">E-post</div>
+        <div class="contact-item-val"><a href="mailto:enkelwebb@outlook.com">enkelwebb@outlook.com</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">Telefon</div>
+        <div class="contact-item-val">+46 70 000 00 00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-logo">Enkel Webb</span>
+    <span class="footer-copy">Tack för att du valde Enkel Webb.</span>
+  </div>
+
+</div>
+</body>
+</html>
