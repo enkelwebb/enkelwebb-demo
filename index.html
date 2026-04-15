@@ -7,15 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Epilogue:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --bg: #F2EFE9;
-      --white: #FAFAF8;
+      --bg: #EDEAE3;
+      --white: #F8F6F1;
       --ink: #141210;
       --mid: #7A756E;
       --light: #C4BDB4;
-      --rule: #E0DAD2;
+      --rule: #D8D1C7;
       --accent: #2A2A2A;
       --green: #3D5A45;
       --green-light: #4E7259;
+      --section-alt: #F8F6F1;
+      --section-dark: #1C1A17;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +29,6 @@
       font-family: 'Epilogue', sans-serif;
       font-weight: 300;
       overflow-x: hidden;
-      cursor: none;
     }
 
     /* ── NAV ── */
@@ -187,6 +188,7 @@
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 80px;
+      background: var(--section-alt);
       border-bottom: 1px solid var(--rule);
     }
 
@@ -256,6 +258,7 @@
     /* ── WORK / GALLERY ── */
     .work {
       padding: 120px 56px;
+      background: var(--bg);
     }
 
     .work-header {
@@ -606,10 +609,28 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
+      background: var(--section-alt);
       border-top: 1px solid var(--rule);
     }
 
     .contact-left { }
+
+    .contact-form-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--green);
+      padding: 16px 32px;
+      text-decoration: none;
+      transition: background 0.2s, gap 0.2s;
+    }
+    .contact-form-btn:hover { background: var(--green-light); gap: 18px; }
 
     .contact-tagline {
       font-family: 'Syne', sans-serif;
@@ -732,8 +753,7 @@
 </head>
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+
 
   <!-- NAV -->
   <nav>
@@ -807,7 +827,7 @@
     <div class="templates">
 
       <!-- MALL 1 — byt ut href mot din riktiga GitHub-länk -->
-      <a href="https://autogadgethive.github.io/enkelwebb-demo/mall1.html" target="_blank" class="template-card reveal reveal-delay-1">
+      <a href="YOUR-GITHUB-LINK-TEMPLATE-1" target="_blank" class="template-card reveal reveal-delay-1">
         <div class="template-tag">Grundmall</div>
         <div class="template-preview">
           <div class="preview-inner preview-1">
@@ -855,7 +875,7 @@
       </a>
 
       <!-- MALL 2 — byt ut href mot din riktiga GitHub-länk -->
-      <a href="https://autogadgethive.github.io/enkelwebb-demo/mall2.html" target="_blank" class="template-card reveal reveal-delay-2">
+      <a href="YOUR-GITHUB-LINK-TEMPLATE-2" target="_blank" class="template-card reveal reveal-delay-2">
         <div class="template-tag premium">Premiummall</div>
         <div class="template-preview">
           <div class="preview-inner preview-2">
@@ -956,16 +976,20 @@
   <section class="contact" id="kontakt">
     <div class="contact-left reveal">
       <h2 class="contact-tagline">Redo att<br>komma<br><em>igång?</em></h2>
-      <p class="contact-desc">Hör av dig så berättar vi mer. Inget krångel, inga konstigheter — bara en rak konversation om vad du behöver.</p>
+      <p class="contact-desc">Hör av dig via telefon eller mejl så berättar vi mer — eller fyll i vårt beställningsformulär direkt så återkommer vi inom kort.</p>
+      <a href="enkel-webb-formular.html" class="contact-form-btn reveal" style="margin-top:32px">
+        Fyll i beställningsformulär
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
     <div class="contact-right reveal reveal-delay-2">
-      <a href="tel:+46722132687" class="contact-row">
+      <a href="tel:+46700000000" class="contact-row">
         <span class="contact-row-label">Telefon</span>
-        <span class="contact-row-value">+46 72 213 26 87</span>
+        <span class="contact-row-value">+46 70 000 00 00</span>
       </a>
-      <a href="mailto:hej@enkelwebb.se" class="contact-row">
+      <a href="mailto:enkelwebb@outlook.com" class="contact-row">
         <span class="contact-row-label">E-post</span>
-        <span class="contact-row-value">oliverwass0@gmail.com</span>
+        <span class="contact-row-value">enkelwebb@outlook.com</span>
       </a>
       <a href="https://www.instagram.com" target="_blank" class="contact-row">
         <span class="contact-row-label">Instagram</span>
@@ -981,6 +1005,7 @@
   </footer>
 
   <script>
+
 
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
